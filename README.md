@@ -29,9 +29,14 @@ Windows:
 git clone https://github.com/doomslayer86/vcard-personal-portfolio.git
 ```
 
-## Deploy to Spaceship (FTP)
+## Deploy to Spaceship
 
-Pushes to `main` or `master` trigger an automatic FTP deploy. Only site files are uploaded; `.git`, `.github`, `node_modules`, and other dev/repo files are excluded.
+Pushes to `master` trigger an automatic deploy. Two workflows:
+
+- **`deploy-to-spaceship.yml`** — FTP (port 21). Use if your host supports FTP.
+- **`deploy-to-spaceship-sftp.yml`** — SFTP (port 22). Use if you get **"Timeout (control socket)"** or your host only allows SFTP (common with cPanel/Spaceship). Same secrets; SFTP runs on push and can also be triggered manually (Actions → Deploy to Spaceship (SFTP) → Run workflow).
+
+Only site files are uploaded; `.git`, `.github`, `node_modules`, and other dev/repo files are excluded.
 
 ### Where to set credentials
 
