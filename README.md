@@ -1,11 +1,5 @@
 # vCard - Personal portfolio
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
-
 vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
 
 ## Demo
@@ -26,18 +20,35 @@ To install **vCard**, follow these steps:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+sudo git clone https://github.com/doomslayer86/vcard-personal-portfolio.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+git clone https://github.com/doomslayer86/vcard-personal-portfolio.git
 ```
 
-## Contact
+## Deploy to Spaceship (FTP)
 
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
+Pushes to `main` or `master` trigger an automatic FTP deploy. Only site files are uploaded; `.git`, `.github`, `node_modules`, and other dev/repo files are excluded.
+
+### Where to set credentials
+
+**GitHub → this repo → Settings → Secrets and variables → Actions**, or **Environments → prod** if you use the prod environment.
+
+Add these secrets (repo or in **prod** environment):
+
+| Secret             | Description |
+|--------------------|-------------|
+| `FTP_SERVER`       | FTP hostname (e.g. `ftp.example.com`) |
+| `FTP_USERNAME`     | FTP username |
+| `FTP_PASSWORD`     | FTP password |
+| `FTP_REMOTE_PATH`  | Use `/` for site root, or e.g. `public_html` |
+
+Then push to `main` or `master`; the **Actions** tab will show the deploy run.
+
+---
 
 ## License
 
